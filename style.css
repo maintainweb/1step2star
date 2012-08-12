@@ -1,0 +1,17 @@
+/*
+Theme Name:     1 Step 2 Star
+Theme URI:      https://maintainweb.co/wordpress/themes/1step2star/
+Description:    Child theme for the Roots framework.
+Author:         Erik James Albaugh
+Author URI:     https://maintainweb.co
+Template:       roots
+Version:        0.1
+*/
+
+aside#sidebar .gform_body ul {
+	margin-left: 0;
+}
+
+aside#sidebar .gform_body ul li {
+	list-style: none;
+}
