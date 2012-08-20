@@ -25,7 +25,7 @@ function roots_scripts() {
   // If you're not using Bootstrap, include HTML5 Boilerplate's main.css:
   // wp_enqueue_style('roots_h5bp', get_template_directory_uri() . '/css/main.css', false, null);
 
-  wp_enqueue_style('roots_app', get_template_directory_uri() . '/css/app.css', false, null);
+  wp_enqueue_style('roots_app', get_stylesheet_directory_uri() . '/css/app.css', false, null);
 
   // Load style.css from child theme
   if (is_child_theme()) {
@@ -44,8 +44,26 @@ function roots_scripts() {
     wp_enqueue_script('comment-reply');
   }
 
-  wp_register_script('roots_plugins', get_template_directory_uri() . '/js/plugins.js', false, null, false);
-  wp_register_script('roots_main', get_template_directory_uri() . '/js/main.js', false, null, false);
+  wp_register_script('roots_scrollto', get_stylesheet_directory_uri() . '/js/jquery.scrollTo-1.4.2-min.js', false, null, false);
+  wp_register_script('roots_easing', get_stylesheet_directory_uri() . '/js/jquery.easing.1.3.js', false, null, false);
+  wp_register_script('roots_scrollorama', get_stylesheet_directory_uri() . '/js/jquery.scrollorama.js', false, null, false);
+  wp_register_script('roots_scrolldeck', get_stylesheet_directory_uri() . '/js/jquery.scrolldeck.js', false, null, false);
+  wp_register_script('roots_parallax', get_stylesheet_directory_uri() . '/js/jquery.parallax-1.1.js', false, null, false);
+  wp_register_script('roots_superscroll', get_stylesheet_directory_uri() . '/js/jquery.superscrollorama.js', false, null, true);
+  wp_register_script('roots_lettering', get_stylesheet_directory_uri() . '/js/jquery.lettering-0.6.1.min.js', false, null, true);
+  wp_register_script('roots_tween', get_stylesheet_directory_uri() . '/js/TweenMax.min.js', false, null, true);
+
+  wp_enqueue_script('roots_scrollto');
+  wp_enqueue_script('roots_easing');
+  wp_enqueue_script('roots_scrollorama');
+  wp_enqueue_script('roots_scrolldeck');
+  wp_enqueue_script('roots_parallax');
+  wp_enqueue_script('roots_superscroll');
+  wp_enqueue_script('roots_lettering');
+  wp_enqueue_script('roots_tween');
+
+  wp_register_script('roots_plugins', get_template_directory_uri() . '/js/plugins.js', false, null, true);
+  wp_register_script('roots_main', get_stylesheet_directory_uri() . '/js/main.js', false, null, true);
   wp_enqueue_script('roots_plugins');
   wp_enqueue_script('roots_main');
 }

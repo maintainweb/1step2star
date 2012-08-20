@@ -1,4 +1,3 @@
-
   </div><!-- /#wrap -->
 
   <?php roots_footer_before(); ?>
@@ -11,6 +10,5 @@
 
   <?php wp_footer(); ?>
   <?php roots_footer(); ?>
-
 </body>
 </html>
